@@ -1,0 +1,11 @@
+{"ts":"2026-09-01T23:12:45.956368Z","seq":1,"type":"run.start","runId":"replay-20260901T231243-39dd97b6"}
+{"ts":"2026-09-01T23:12:45.966557Z","seq":2,"type":"replay.start","version":"1.0.0","capability":"lookup_member_savings_balance","params":{"memberId":"10001"},"tenant":"base"}
+{"ts":"2026-09-01T23:12:47.091557Z","seq":3,"type":"replay.step","action":"NAVIGATE","recoveries":[],"strategy":"","step":"s0","detail":"navigated to http://localhost:8080/login"}
+{"ts":"2026-09-01T23:12:47.181392Z","seq":4,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s1","detail":"typed into role=textbox name~='Username'"}
+{"ts":"2026-09-01T23:12:47.240110Z","seq":5,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s2","detail":"typed into role=textbox name~='Password'"}
+{"ts":"2026-09-01T23:12:55.798607Z","seq":6,"type":"replay.step","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME","step":"s3","detail":"clicked role=button name~='Sign In'"}
+{"ts":"2026-09-01T23:12:55.836494Z","seq":7,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s4","detail":"typed into role=textbox name~='Member ID'"}
+{"ts":"2026-09-01T23:12:56.467273Z","seq":8,"type":"replay.step","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME","step":"s5","detail":"clicked role=button name~='Search'"}
+{"ts":"2026-09-01T23:12:56.515206Z","seq":9,"type":"replay.step","action":"EXTRACT","recoveries":[],"strategy":"TEST_ID","step":"s6","detail":"extracted"}
+{"ts":"2026-09-01T23:12:56.569406Z","seq":10,"type":"screenshot","file":"steps/09-replay-success.png","label":"replay-success"}
+{"ts":"2026-09-01T23:12:56.581015Z","seq":11,"type":"run.end","resultFile":"result.json"}

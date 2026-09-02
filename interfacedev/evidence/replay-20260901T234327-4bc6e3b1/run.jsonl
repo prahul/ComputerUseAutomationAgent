@@ -1,0 +1,17 @@
+{"ts":"2026-09-01T23:43:30.895958Z","seq":1,"type":"run.start","runId":"replay-20260901T234327-4bc6e3b1"}
+{"ts":"2026-09-01T23:43:30.909007Z","seq":2,"type":"replay.start","params":{"memberId":"10001","deposit":"250"},"capability":"open_member_sub_account","version":"1.0.0","tenant":"base"}
+{"ts":"2026-09-01T23:43:32.047567Z","seq":3,"type":"replay.step","strategy":"","recoveries":[],"action":"NAVIGATE","detail":"navigated to http://localhost:8080/login","step":"s0"}
+{"ts":"2026-09-01T23:43:32.307121Z","seq":4,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Username'","step":"s1"}
+{"ts":"2026-09-01T23:43:32.530344Z","seq":5,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Password'","step":"s2"}
+{"ts":"2026-09-01T23:43:41.154492Z","seq":6,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"CLICK","detail":"clicked role=button name~='Sign In'","step":"s3"}
+{"ts":"2026-09-01T23:43:41.363188Z","seq":7,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Member ID'","step":"s4"}
+{"ts":"2026-09-01T23:43:42.081565Z","seq":8,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"CLICK","detail":"clicked role=button name~='Search'","step":"s5"}
+{"ts":"2026-09-01T23:43:42.701522Z","seq":9,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"CLICK","detail":"clicked role=link name~='Open Sub-Account'","step":"s6"}
+{"ts":"2026-09-01T23:43:42.918255Z","seq":10,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"SELECT_OPTION","detail":"selected Holiday Club","step":"s7"}
+{"ts":"2026-09-01T23:43:43.124101Z","seq":11,"type":"replay.step","strategy":"ROLE_NAME","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Initial deposit'","step":"s8"}
+{"ts":"2026-09-01T23:43:43.177812Z","seq":12,"type":"screenshot","file":"steps/11-escalation.png","label":"escalation"}
+{"ts":"2026-09-01T23:43:43.178459Z","seq":13,"type":"escalation.raised","trigger":"POLICY_APPROVAL","reason":"Replay needs human approval: step is marked REQUIRE_APPROVAL in the artifact"}
+{"ts":"2026-09-01T23:44:27.347391Z","seq":14,"type":"replay.drift","step":"s9","expected":"ROLE_NAME","actual":"BBOX"}
+{"ts":"2026-09-01T23:44:27.546399Z","seq":15,"type":"replay.step","strategy":"BBOX","recoveries":[],"action":"CLICK","detail":"clicked bbox(0.237,0.279)","step":"s9"}
+{"ts":"2026-09-01T23:44:27.580056Z","seq":16,"type":"screenshot","file":"steps/15-replay-success.png","label":"replay-success"}
+{"ts":"2026-09-01T23:44:27.585997Z","seq":17,"type":"run.end","resultFile":"result.json"}

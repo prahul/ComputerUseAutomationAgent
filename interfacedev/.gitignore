@@ -1,0 +1,14 @@
+# build
+target/
+*.class
+cp.txt
+dependency-reduced-pom.xml
+
+# local secrets (use config/secrets.example.json as a template)
+config/secrets.json
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store

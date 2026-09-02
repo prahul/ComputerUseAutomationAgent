@@ -1,0 +1,59 @@
+{
+  "status" : "BUSINESS_OUTCOME",
+  "outcomeCode" : "SESSION_EXPIRED",
+  "outcomeClass" : "DENIED",
+  "outcomeMessage" : "The session expired mid-flow; a fresh login is required.",
+  "outputs" : { },
+  "steps" : [ {
+    "stepId" : "s0",
+    "action" : "NAVIGATE",
+    "status" : "OK",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 1118,
+    "detail" : "navigated to http://localhost:8080/login"
+  }, {
+    "stepId" : "s1",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 104,
+    "detail" : "typed into role=textbox name~='Username'"
+  }, {
+    "stepId" : "s2",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 67,
+    "detail" : "typed into role=textbox name~='Password'"
+  }, {
+    "stepId" : "s3",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 8777,
+    "detail" : "clicked role=button name~='Sign In'"
+  }, {
+    "stepId" : "s4",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 58,
+    "detail" : "typed into role=textbox name~='Member ID'"
+  } ],
+  "driftSignals" : [ ],
+  "runId" : "replay-20260901T231954-fea7516f",
+  "artifactName" : "lookup_member_savings_balance",
+  "artifactVersion" : "1.0.0",
+  "tenantId" : "base",
+  "startedAt" : "2026-09-01T23:19:56.734188Z",
+  "finishedAt" : "2026-09-01T23:20:17.604975Z"
+}

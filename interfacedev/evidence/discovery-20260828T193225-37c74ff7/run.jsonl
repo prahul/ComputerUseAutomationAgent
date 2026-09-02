@@ -1,0 +1,10 @@
+{"ts":"2026-08-28T19:32:27.639630Z","seq":1,"type":"run.start","runId":"discovery-20260828T193225-37c74ff7"}
+{"ts":"2026-08-28T19:32:28.497997Z","seq":2,"type":"discovery.start","entryUrl":"http://localhost:8080/","goal":"Sign in to the servicing console, look up member 10001 and read their current savings balance"}
+{"ts":"2026-08-28T19:32:28.543164Z","seq":3,"type":"screenshot","label":"start","file":"steps/02-start.png"}
+{"ts":"2026-08-28T19:32:32.750180Z","seq":4,"type":"screenshot","label":"step-1","file":"steps/03-step-1.png"}
+{"ts":"2026-08-28T19:32:43.485844Z","seq":5,"type":"screenshot","label":"step-2","file":"steps/04-step-2.png"}
+{"ts":"2026-08-28T19:32:45.666376Z","seq":6,"type":"screenshot","label":"step-3","file":"steps/05-step-3.png"}
+{"ts":"2026-08-28T19:32:48.901899Z","seq":7,"type":"screenshot","label":"step-4","file":"steps/06-step-4.png"}
+{"ts":"2026-08-28T19:32:51.303985Z","seq":8,"type":"agent.extract","value":"$4210.55","name":"savingsBalance"}
+{"ts":"2026-08-28T19:32:51.350160Z","seq":9,"type":"screenshot","label":"step-5","file":"steps/08-step-5.png"}
+{"ts":"2026-08-28T19:32:55.308284Z","seq":10,"type":"discovery.finish","capability":"lookup_member_savings_balance","steps":6}

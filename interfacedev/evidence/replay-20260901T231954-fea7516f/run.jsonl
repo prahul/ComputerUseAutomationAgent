@@ -1,0 +1,10 @@
+{"ts":"2026-09-01T23:19:56.725173Z","seq":1,"type":"run.start","runId":"replay-20260901T231954-fea7516f"}
+{"ts":"2026-09-01T23:19:56.734213Z","seq":2,"type":"replay.start","tenant":"base","version":"1.0.0","capability":"lookup_member_savings_balance","params":{"memberId":"10001"}}
+{"ts":"2026-09-01T23:19:57.852356Z","seq":3,"type":"replay.step","step":"s0","detail":"navigated to http://localhost:8080/login","action":"NAVIGATE","recoveries":[],"strategy":""}
+{"ts":"2026-09-01T23:19:57.957866Z","seq":4,"type":"replay.step","step":"s1","detail":"typed into role=textbox name~='Username'","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T23:19:58.025063Z","seq":5,"type":"replay.step","step":"s2","detail":"typed into role=textbox name~='Password'","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T23:20:06.802737Z","seq":6,"type":"replay.step","step":"s3","detail":"clicked role=button name~='Sign In'","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T23:20:06.861494Z","seq":7,"type":"replay.step","step":"s4","detail":"typed into role=textbox name~='Member ID'","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T23:20:17.604042Z","seq":8,"type":"screenshot","label":"business-outcome","file":"steps/07-business-outcome.png"}
+{"ts":"2026-09-01T23:20:17.604385Z","seq":9,"type":"replay.business_outcome","code":"SESSION_EXPIRED","message":"The session expired mid-flow; a fresh login is required.","class":"DENIED","atStep":"s5"}
+{"ts":"2026-09-01T23:20:17.614081Z","seq":10,"type":"run.end","resultFile":"result.json"}

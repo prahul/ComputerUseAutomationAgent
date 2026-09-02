@@ -1,0 +1,95 @@
+{
+  "status" : "BUSINESS_OUTCOME",
+  "outcomeCode" : "VALIDATION_REJECTED",
+  "outcomeClass" : "BUSINESS",
+  "outcomeMessage" : "The application rejected the submitted values.",
+  "outputs" : { },
+  "steps" : [ {
+    "stepId" : "s0",
+    "action" : "NAVIGATE",
+    "status" : "OK",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 1108,
+    "detail" : "navigated to http://localhost:8080/login"
+  }, {
+    "stepId" : "s1",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 146,
+    "detail" : "typed into role=textbox name~='Username'"
+  }, {
+    "stepId" : "s2",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 64,
+    "detail" : "typed into role=textbox name~='Password'"
+  }, {
+    "stepId" : "s3",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 8769,
+    "detail" : "clicked role=button name~='Sign In'"
+  }, {
+    "stepId" : "s4",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 33,
+    "detail" : "typed into role=textbox name~='Member ID'"
+  }, {
+    "stepId" : "s5",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 649,
+    "detail" : "clicked role=button name~='Search'"
+  }, {
+    "stepId" : "s6",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 568,
+    "detail" : "clicked role=link name~='Open Sub-Account'"
+  }, {
+    "stepId" : "s7",
+    "action" : "SELECT_OPTION",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 51,
+    "detail" : "selected Holiday Club"
+  }, {
+    "stepId" : "s8",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 27,
+    "detail" : "typed into role=textbox name~='Initial deposit'"
+  } ],
+  "driftSignals" : [ ],
+  "runId" : "replay-20260901T233526-9024d2b6",
+  "artifactName" : "open_member_sub_account",
+  "artifactVersion" : "1.0.0",
+  "tenantId" : "base",
+  "startedAt" : "2026-09-01T23:35:29.208819Z",
+  "finishedAt" : "2026-09-01T23:36:11.315824Z"
+}

@@ -1,0 +1,76 @@
+{
+  "status" : "SUCCESS",
+  "outputs" : {
+    "savingsBalance" : 15230.0
+  },
+  "steps" : [ {
+    "stepId" : "s0",
+    "action" : "NAVIGATE",
+    "status" : "OK",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 1142,
+    "detail" : "navigated to http://localhost:8080/login"
+  }, {
+    "stepId" : "s1",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 90,
+    "detail" : "typed into role=textbox name~='Username'"
+  }, {
+    "stepId" : "s2",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 55,
+    "detail" : "typed into role=textbox name~='Password'"
+  }, {
+    "stepId" : "s3",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 8576,
+    "detail" : "clicked role=button name~='Sign In'"
+  }, {
+    "stepId" : "s4",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 42,
+    "detail" : "typed into role=textbox name~='Member ID'"
+  }, {
+    "stepId" : "s5",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 631,
+    "detail" : "clicked role=button name~='Search'"
+  }, {
+    "stepId" : "s6",
+    "action" : "EXTRACT",
+    "status" : "OK",
+    "locatorStrategyUsed" : "TEST_ID",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 39,
+    "detail" : "extracted"
+  } ],
+  "driftSignals" : [ ],
+  "runId" : "invoke-20260902T020233-15faf0e7",
+  "artifactName" : "lookup_member_savings_balance",
+  "artifactVersion" : "1.0.0",
+  "tenantId" : "base",
+  "startedAt" : "2026-09-02T02:02:36.550895Z",
+  "finishedAt" : "2026-09-02T02:02:47.179287Z"
+}

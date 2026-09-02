@@ -1,0 +1,10 @@
+{"ts":"2026-09-01T19:51:07.378485Z","seq":1,"type":"run.start","runId":"replay-20260901T195105-650f1be7"}
+{"ts":"2026-09-01T19:51:07.388689Z","seq":2,"type":"replay.start","capability":"lookup_member_savings_balance","version":"1.0.0","tenant":"base","params":{"memberId":"99999"}}
+{"ts":"2026-09-01T19:51:08.501973Z","seq":3,"type":"replay.step","recoveries":[],"action":"NAVIGATE","detail":"navigated to http://localhost:8080/login","step":"s0","strategy":""}
+{"ts":"2026-09-01T19:51:08.582152Z","seq":4,"type":"replay.step","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Username'","step":"s1","strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T19:51:08.643065Z","seq":5,"type":"replay.step","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Password'","step":"s2","strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T19:51:17.217436Z","seq":6,"type":"replay.step","recoveries":[],"action":"CLICK","detail":"clicked role=button name~='Sign In'","step":"s3","strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T19:51:17.263578Z","seq":7,"type":"replay.step","recoveries":[],"action":"TYPE","detail":"typed into role=textbox name~='Member ID'","step":"s4","strategy":"ROLE_NAME"}
+{"ts":"2026-09-01T19:51:28.128227Z","seq":8,"type":"screenshot","file":"steps/07-business-outcome.png","label":"business-outcome"}
+{"ts":"2026-09-01T19:51:28.128692Z","seq":9,"type":"replay.business_outcome","atStep":"s5","class":"BUSINESS","message":"No member matches the supplied ID.","code":"MEMBER_NOT_FOUND"}
+{"ts":"2026-09-01T19:51:28.139373Z","seq":10,"type":"run.end","resultFile":"result.json"}

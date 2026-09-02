@@ -1,0 +1,10 @@
+{"ts":"2026-09-01T19:54:05.872129Z","seq":1,"type":"run.start","runId":"replay-20260901T195403-eac46340"}
+{"ts":"2026-09-01T19:54:05.879672Z","seq":2,"type":"replay.start","version":"1.0.0","capability":"lookup_member_savings_balance","params":{"memberId":"10003"},"tenant":"base"}
+{"ts":"2026-09-01T19:54:06.978430Z","seq":3,"type":"replay.step","recoveries":[],"strategy":"","step":"s0","detail":"navigated to http://localhost:8080/login","action":"NAVIGATE"}
+{"ts":"2026-09-01T19:54:07.055994Z","seq":4,"type":"replay.step","recoveries":[],"strategy":"ROLE_NAME","step":"s1","detail":"typed into role=textbox name~='Username'","action":"TYPE"}
+{"ts":"2026-09-01T19:54:07.114205Z","seq":5,"type":"replay.step","recoveries":[],"strategy":"ROLE_NAME","step":"s2","detail":"typed into role=textbox name~='Password'","action":"TYPE"}
+{"ts":"2026-09-01T19:54:15.871717Z","seq":6,"type":"replay.step","recoveries":[],"strategy":"ROLE_NAME","step":"s3","detail":"clicked role=button name~='Sign In'","action":"CLICK"}
+{"ts":"2026-09-01T19:54:15.903533Z","seq":7,"type":"replay.step","recoveries":[],"strategy":"ROLE_NAME","step":"s4","detail":"typed into role=textbox name~='Member ID'","action":"TYPE"}
+{"ts":"2026-09-01T19:54:26.810118Z","seq":8,"type":"screenshot","file":"steps/07-business-outcome.png","label":"business-outcome"}
+{"ts":"2026-09-01T19:54:26.810524Z","seq":9,"type":"replay.business_outcome","message":"The operator role cannot view this member.","class":"DENIED","atStep":"s5","code":"PERMISSION_DENIED"}
+{"ts":"2026-09-01T19:54:26.822672Z","seq":10,"type":"run.end","resultFile":"result.json"}

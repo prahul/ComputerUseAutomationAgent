@@ -1,0 +1,76 @@
+{
+  "status" : "SUCCESS",
+  "outputs" : {
+    "savingsBalance" : 4210.55
+  },
+  "steps" : [ {
+    "stepId" : "s0",
+    "action" : "NAVIGATE",
+    "status" : "OK",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 1116,
+    "detail" : "navigated to http://localhost:8080/altcu/login"
+  }, {
+    "stepId" : "s1",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 93,
+    "detail" : "typed into role=textbox name~='Username'"
+  }, {
+    "stepId" : "s2",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 55,
+    "detail" : "typed into role=textbox name~='Password'"
+  }, {
+    "stepId" : "s3",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 8650,
+    "detail" : "clicked role=button name~='Sign In'"
+  }, {
+    "stepId" : "s4",
+    "action" : "TYPE",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 38,
+    "detail" : "typed into role=textbox name~='Customer ID'"
+  }, {
+    "stepId" : "s5",
+    "action" : "CLICK",
+    "status" : "OK",
+    "locatorStrategyUsed" : "ROLE_NAME",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 656,
+    "detail" : "clicked role=button name~='Search'"
+  }, {
+    "stepId" : "s6",
+    "action" : "EXTRACT",
+    "status" : "OK",
+    "locatorStrategyUsed" : "TEST_ID",
+    "usedFallback" : false,
+    "recoveriesApplied" : [ ],
+    "elapsedMs" : 41,
+    "detail" : "extracted"
+  } ],
+  "driftSignals" : [ ],
+  "runId" : "replay-20260902T020045-bd359ece",
+  "artifactName" : "lookup_member_savings_balance",
+  "artifactVersion" : "1.0.0",
+  "tenantId" : "altcu",
+  "startedAt" : "2026-09-02T02:00:47.644472Z",
+  "finishedAt" : "2026-09-02T02:00:58.338829Z"
+}

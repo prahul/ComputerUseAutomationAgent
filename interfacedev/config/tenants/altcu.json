@@ -1,0 +1,22 @@
+{
+  "tenantId" : "altcu",
+  "vendorProduct" : "acme-servicing",
+  "baseUrl" : "http://localhost:8080/altcu",
+  "secrets" : { },
+  "stepLocatorOverrides" : {
+    "s4" : {
+      "primary" : { "kind" : "ROLE_NAME", "role" : "textbox", "name" : "Customer ID" },
+      "fallbacks" : [
+        { "kind" : "LABEL", "labelText" : "Customer ID" },
+        { "kind" : "TEST_ID", "testId" : "mid" },
+        { "kind" : "CSS", "css" : "#mid" }
+      ],
+      "rationale" : "Tenant 'altcu' brands members as 'Customers'; the field is labelled 'Customer ID'. Structural fallbacks (#mid) are shared across brandings of the same vendor product."
+    }
+  },
+  "textOverrides" : { },
+  "notes" : [
+    "Same acme-servicing product as tenant 'base', different branding: 'Customer' vs 'Member', /altcu route prefix, different accent colour.",
+    "Only the member-search field diverges; every other step in lookup_member_savings_balance binds unchanged."
+  ]
+}

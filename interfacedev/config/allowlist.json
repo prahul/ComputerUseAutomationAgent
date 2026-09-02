@@ -1,0 +1,10 @@
+{
+  "id" : "default",
+  "allowedOrigins" : [ "http://localhost:8080" ],
+  "allowedUrlPatterns" : [ "^http://localhost:8080(/.*)?$" ],
+  "allowedActionTypes" : [ "NAVIGATE", "CLICK", "TYPE", "SELECT_OPTION", "PRESS_KEY", "SCROLL_TO", "EXTRACT", "WAIT" ],
+  "writeActionPolicy" : "REQUIRE_APPROVAL",
+  "maxSteps" : 25,
+  "maxWallClockMs" : 300000,
+  "allowUnattendedDraft" : false
+}

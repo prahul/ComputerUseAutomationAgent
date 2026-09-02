@@ -1,0 +1,11 @@
+{"ts":"2026-08-28T19:35:22.922987Z","seq":1,"type":"run.start","runId":"replay-20260828T193521-a72b9673"}
+{"ts":"2026-08-28T19:35:22.932547Z","seq":2,"type":"replay.start","tenant":"altcu","version":"1.0.0","capability":"lookup_member_savings_balance","params":{"memberId":"10002"}}
+{"ts":"2026-08-28T19:35:24.023609Z","seq":3,"type":"replay.step","step":"s0","detail":"navigated to http://localhost:8080/altcu/login","action":"NAVIGATE","recoveries":[],"strategy":""}
+{"ts":"2026-08-28T19:35:24.099139Z","seq":4,"type":"replay.step","step":"s1","detail":"typed into role=textbox name~='Username'","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-08-28T19:35:24.143804Z","seq":5,"type":"replay.step","step":"s2","detail":"typed into role=textbox name~='Password'","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-08-28T19:35:32.718232Z","seq":6,"type":"replay.step","step":"s3","detail":"clicked role=button name~='Sign In'","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-08-28T19:35:32.762283Z","seq":7,"type":"replay.step","step":"s4","detail":"typed into role=textbox name~='Customer ID'","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-08-28T19:35:33.395032Z","seq":8,"type":"replay.step","step":"s5","detail":"clicked role=button name~='Search'","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME"}
+{"ts":"2026-08-28T19:35:33.435079Z","seq":9,"type":"replay.step","step":"s6","detail":"extracted","action":"EXTRACT","recoveries":[],"strategy":"TEST_ID"}
+{"ts":"2026-08-28T19:35:33.477929Z","seq":10,"type":"screenshot","label":"replay-success","file":"steps/09-replay-success.png"}
+{"ts":"2026-08-28T19:35:33.486691Z","seq":11,"type":"run.end","resultFile":"result.json"}

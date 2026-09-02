@@ -1,0 +1,16 @@
+{"ts":"2026-09-01T23:35:29.199718Z","seq":1,"type":"run.start","runId":"replay-20260901T233526-9024d2b6"}
+{"ts":"2026-09-01T23:35:29.208843Z","seq":2,"type":"replay.start","version":"1.0.0","capability":"open_member_sub_account","params":{"memberId":"10001","deposit":"-5"},"tenant":"base"}
+{"ts":"2026-09-01T23:35:30.317516Z","seq":3,"type":"replay.step","action":"NAVIGATE","recoveries":[],"strategy":"","step":"s0","detail":"navigated to http://localhost:8080/login"}
+{"ts":"2026-09-01T23:35:30.464673Z","seq":4,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s1","detail":"typed into role=textbox name~='Username'"}
+{"ts":"2026-09-01T23:35:30.529073Z","seq":5,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s2","detail":"typed into role=textbox name~='Password'"}
+{"ts":"2026-09-01T23:35:39.298964Z","seq":6,"type":"replay.step","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME","step":"s3","detail":"clicked role=button name~='Sign In'"}
+{"ts":"2026-09-01T23:35:39.332182Z","seq":7,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s4","detail":"typed into role=textbox name~='Member ID'"}
+{"ts":"2026-09-01T23:35:39.981858Z","seq":8,"type":"replay.step","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME","step":"s5","detail":"clicked role=button name~='Search'"}
+{"ts":"2026-09-01T23:35:40.550296Z","seq":9,"type":"replay.step","action":"CLICK","recoveries":[],"strategy":"ROLE_NAME","step":"s6","detail":"clicked role=link name~='Open Sub-Account'"}
+{"ts":"2026-09-01T23:35:40.601200Z","seq":10,"type":"replay.step","action":"SELECT_OPTION","recoveries":[],"strategy":"ROLE_NAME","step":"s7","detail":"selected Holiday Club"}
+{"ts":"2026-09-01T23:35:40.628420Z","seq":11,"type":"replay.step","action":"TYPE","recoveries":[],"strategy":"ROLE_NAME","step":"s8","detail":"typed into role=textbox name~='Initial deposit'"}
+{"ts":"2026-09-01T23:35:40.661700Z","seq":12,"type":"screenshot","file":"steps/11-escalation.png","label":"escalation"}
+{"ts":"2026-09-01T23:35:40.662347Z","seq":13,"type":"escalation.raised","trigger":"POLICY_APPROVAL","reason":"Replay needs human approval: step is marked REQUIRE_APPROVAL in the artifact"}
+{"ts":"2026-09-01T23:36:11.314863Z","seq":14,"type":"screenshot","file":"steps/13-business-outcome.png","label":"business-outcome"}
+{"ts":"2026-09-01T23:36:11.315255Z","seq":15,"type":"replay.business_outcome","message":"The application rejected the submitted values.","class":"BUSINESS","atStep":"s9","code":"VALIDATION_REJECTED"}
+{"ts":"2026-09-01T23:36:11.322463Z","seq":16,"type":"run.end","resultFile":"result.json"}

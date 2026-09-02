@@ -1,0 +1,673 @@
+{
+  "schemaVersion" : "1.0",
+  "meta" : {
+    "id" : "5b5e9a3a-a181-48bb-a20b-0d3bc733dc6a",
+    "name" : "open_member_sub_account",
+    "version" : "1.0.0",
+    "title" : "Open Member Sub Account",
+    "description" : "Discovered capability: Sign in, look up member {memberId}, open a new sub-account of type Holiday Club with an initial deposit of {deposit}, and reach the confirmation screen",
+    "sourceRunId" : "discovery-20260901T233152-df6bec33",
+    "createdAt" : "2026-09-01T23:33:02.786346Z",
+    "createdBy" : "discovery-agent",
+    "approval" : "DRAFT"
+  },
+  "surface" : {
+    "kind" : "web",
+    "engine" : "playwright-chromium",
+    "viewportWidth" : 1280,
+    "viewportHeight" : 900
+  },
+  "target" : {
+    "appId" : "cu-servicing-console",
+    "vendorProduct" : "acme-servicing",
+    "entryUrl" : "${tenant.baseUrl}/",
+    "allowlistId" : "default"
+  },
+  "parameters" : [ {
+    "name" : "memberId",
+    "type" : "STRING",
+    "required" : true,
+    "sensitive" : false,
+    "description" : "Supplied by the calling agent.",
+    "example" : "10001"
+  }, {
+    "name" : "deposit",
+    "type" : "STRING",
+    "required" : true,
+    "sensitive" : false,
+    "description" : "Supplied by the calling agent.",
+    "example" : "250"
+  } ],
+  "outputs" : [ ],
+  "steps" : [ {
+    "id" : "s0",
+    "action" : "NAVIGATE",
+    "intent" : "open the application entry point",
+    "url" : "${tenant.baseUrl}/",
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "URL_MATCHES",
+        "text" : "/login",
+        "regex" : false
+      },
+      "timeoutMs" : 15000,
+      "description" : "loaded /login"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s1",
+    "action" : "TYPE",
+    "intent" : "enter value — The textbox labeled \"Username\" is the standard field for entering login username",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "textbox",
+        "name" : "Username"
+      },
+      "fallbacks" : [ {
+        "kind" : "LABEL",
+        "labelText" : "Username"
+      }, {
+        "kind" : "TEST_ID",
+        "testId" : "u"
+      }, {
+        "kind" : "CSS",
+        "css" : "#u"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.339,
+        "normY" : 0.164
+      } ],
+      "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Username\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "value" : {
+      "secretRef" : "credentials.username"
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "ELEMENT_VISIBLE",
+        "regex" : false,
+        "target" : {
+          "primary" : {
+            "kind" : "ROLE_NAME",
+            "role" : "textbox",
+            "name" : "Username"
+          },
+          "fallbacks" : [ {
+            "kind" : "LABEL",
+            "labelText" : "Username"
+          }, {
+            "kind" : "TEST_ID",
+            "testId" : "u"
+          }, {
+            "kind" : "CSS",
+            "css" : "#u"
+          }, {
+            "kind" : "BBOX",
+            "normX" : 0.339,
+            "normY" : 0.164
+          } ],
+          "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Username\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+        }
+      },
+      "timeoutMs" : 5000,
+      "description" : "field is present"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s2",
+    "action" : "TYPE",
+    "intent" : "enter value — The textbox labeled \"Password\" is the standard field for entering login password",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "textbox",
+        "name" : "Password"
+      },
+      "fallbacks" : [ {
+        "kind" : "LABEL",
+        "labelText" : "Password"
+      }, {
+        "kind" : "TEST_ID",
+        "testId" : "p"
+      }, {
+        "kind" : "CSS",
+        "css" : "#p"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.339,
+        "normY" : 0.203
+      } ],
+      "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Password\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "value" : {
+      "secretRef" : "credentials.password"
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "ELEMENT_VISIBLE",
+        "regex" : false,
+        "target" : {
+          "primary" : {
+            "kind" : "ROLE_NAME",
+            "role" : "textbox",
+            "name" : "Password"
+          },
+          "fallbacks" : [ {
+            "kind" : "LABEL",
+            "labelText" : "Password"
+          }, {
+            "kind" : "TEST_ID",
+            "testId" : "p"
+          }, {
+            "kind" : "CSS",
+            "css" : "#p"
+          }, {
+            "kind" : "BBOX",
+            "normX" : 0.339,
+            "normY" : 0.203
+          } ],
+          "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Password\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+        }
+      },
+      "timeoutMs" : 5000,
+      "description" : "field is present"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s3",
+    "action" : "CLICK",
+    "intent" : "click — The \"Sign In\" button is the standard submit control for the login form",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "button",
+        "name" : "Sign In"
+      },
+      "fallbacks" : [ {
+        "kind" : "TEXT",
+        "text" : "Sign In"
+      }, {
+        "kind" : "CSS",
+        "css" : "form > table > tbody > tr:nth-of-type(3) > td > button"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.209,
+        "normY" : 0.24
+      } ],
+      "rationale" : "Primary: role=button+name. The control's role and accessible name (\"Sign In\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: text -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "URL_MATCHES",
+        "text" : "/dashboard",
+        "regex" : false
+      },
+      "timeoutMs" : 10000,
+      "description" : "navigated to /dashboard"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s4",
+    "action" : "TYPE",
+    "intent" : "enter value — The textbox labeled \"Member ID\" is the designated input for member lookup",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "textbox",
+        "name" : "Member ID"
+      },
+      "fallbacks" : [ {
+        "kind" : "LABEL",
+        "labelText" : "Member ID"
+      }, {
+        "kind" : "TEST_ID",
+        "testId" : "mid"
+      }, {
+        "kind" : "CSS",
+        "css" : "#mid"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.342,
+        "normY" : 0.164
+      } ],
+      "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Member ID\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "value" : {
+      "paramRef" : "memberId"
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "ELEMENT_VISIBLE",
+        "regex" : false,
+        "target" : {
+          "primary" : {
+            "kind" : "ROLE_NAME",
+            "role" : "textbox",
+            "name" : "Member ID"
+          },
+          "fallbacks" : [ {
+            "kind" : "LABEL",
+            "labelText" : "Member ID"
+          }, {
+            "kind" : "TEST_ID",
+            "testId" : "mid"
+          }, {
+            "kind" : "CSS",
+            "css" : "#mid"
+          }, {
+            "kind" : "BBOX",
+            "normX" : 0.342,
+            "normY" : 0.164
+          } ],
+          "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Member ID\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+        }
+      },
+      "timeoutMs" : 5000,
+      "description" : "field is present"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s5",
+    "action" : "CLICK",
+    "intent" : "click — The \"Search\" button triggers the member lookup query",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "button",
+        "name" : "Search"
+      },
+      "fallbacks" : [ {
+        "kind" : "TEXT",
+        "text" : "Search"
+      }, {
+        "kind" : "CSS",
+        "css" : "table > tbody > tr > td > form > button"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.439,
+        "normY" : 0.164
+      } ],
+      "rationale" : "Primary: role=button+name. The control's role and accessible name (\"Search\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: text -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "ELEMENT_VISIBLE",
+        "regex" : false,
+        "target" : {
+          "primary" : {
+            "kind" : "ROLE_NAME",
+            "role" : "link",
+            "name" : "Open Sub-Account"
+          },
+          "fallbacks" : [ {
+            "kind" : "TEXT",
+            "text" : "Open Sub-Account"
+          }, {
+            "kind" : "CSS",
+            "css" : "html > body > p > a"
+          }, {
+            "kind" : "BBOX",
+            "normX" : 0.065,
+            "normY" : 0.216
+          } ],
+          "rationale" : "Primary: role=link+name. The control's role and accessible name (\"Open Sub-Account\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: text -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+        }
+      },
+      "timeoutMs" : 10000,
+      "description" : "the next target is visible after the click"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s6",
+    "action" : "CLICK",
+    "intent" : "click — The \"Open Sub-Account\" link is the direct action to begin creating a new sub-acc",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "link",
+        "name" : "Open Sub-Account"
+      },
+      "fallbacks" : [ {
+        "kind" : "TEXT",
+        "text" : "Open Sub-Account"
+      }, {
+        "kind" : "CSS",
+        "css" : "html > body > p > a"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.065,
+        "normY" : 0.216
+      } ],
+      "rationale" : "Primary: role=link+name. The control's role and accessible name (\"Open Sub-Account\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: text -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "URL_MATCHES",
+        "text" : "/sub-account",
+        "regex" : false
+      },
+      "timeoutMs" : 10000,
+      "description" : "navigated to /sub-account"
+    },
+    "risk" : "SENSITIVE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s7",
+    "action" : "SELECT_OPTION",
+    "intent" : "choose option — The \"Account type\" combobox is the designated control for selecting sub-account ",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "combobox",
+        "name" : "Account type"
+      },
+      "fallbacks" : [ {
+        "kind" : "TEST_ID",
+        "testId" : "at"
+      }, {
+        "kind" : "CSS",
+        "css" : "#at"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.328,
+        "normY" : 0.203
+      } ],
+      "rationale" : "Primary: role=combobox+name. The control's role and accessible name (\"Account type\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "value" : {
+      "literal" : "Holiday Club"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s8",
+    "action" : "TYPE",
+    "intent" : "enter value — The \"Initial deposit\" textbox is the field for specifying the opening deposit am",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "textbox",
+        "name" : "Initial deposit"
+      },
+      "fallbacks" : [ {
+        "kind" : "LABEL",
+        "labelText" : "Initial deposit"
+      }, {
+        "kind" : "PLACEHOLDER",
+        "placeholder" : "0.00"
+      }, {
+        "kind" : "TEST_ID",
+        "testId" : "dep"
+      }, {
+        "kind" : "CSS",
+        "css" : "#dep"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.339,
+        "normY" : 0.242
+      } ],
+      "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Initial deposit\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> placeholder -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "value" : {
+      "paramRef" : "deposit"
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "ELEMENT_VISIBLE",
+        "regex" : false,
+        "target" : {
+          "primary" : {
+            "kind" : "ROLE_NAME",
+            "role" : "textbox",
+            "name" : "Initial deposit"
+          },
+          "fallbacks" : [ {
+            "kind" : "LABEL",
+            "labelText" : "Initial deposit"
+          }, {
+            "kind" : "PLACEHOLDER",
+            "placeholder" : "0.00"
+          }, {
+            "kind" : "TEST_ID",
+            "testId" : "dep"
+          }, {
+            "kind" : "CSS",
+            "css" : "#dep"
+          }, {
+            "kind" : "BBOX",
+            "normX" : 0.339,
+            "normY" : 0.242
+          } ],
+          "rationale" : "Primary: role=textbox+name. The control's role and accessible name (\"Initial deposit\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: label -> placeholder -> id/name attr -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+        }
+      },
+      "timeoutMs" : 5000,
+      "description" : "field is present"
+    },
+    "risk" : "SAFE",
+    "policy" : "ALLOW"
+  }, {
+    "id" : "s9",
+    "action" : "CLICK",
+    "intent" : "click — The \"Review and Create\" button is the next step in the sub-account creation flow",
+    "target" : {
+      "primary" : {
+        "kind" : "ROLE_NAME",
+        "role" : "button",
+        "name" : "Review and Create"
+      },
+      "fallbacks" : [ {
+        "kind" : "TEXT",
+        "text" : "Review and Create"
+      }, {
+        "kind" : "CSS",
+        "css" : "form > table > tbody > tr:nth-of-type(3) > td > button"
+      }, {
+        "kind" : "BBOX",
+        "normX" : 0.237,
+        "normY" : 0.279
+      } ],
+      "rationale" : "Primary: role=button+name. The control's role and accessible name (\"Review and Create\") are functional and unlikely to change in a slow-moving back-office UI. Fallbacks in order: text -> css path -> normalized bbox click. The bounding-box fallback keeps replay working even with no usable DOM."
+    },
+    "checkpoint" : {
+      "condition" : {
+        "kind" : "TEXT_PRESENT",
+        "text" : "Confirmation",
+        "regex" : false
+      },
+      "timeoutMs" : 10000,
+      "description" : "post-click screen shows \"Confirmation\""
+    },
+    "risk" : "IRREVERSIBLE",
+    "policy" : "REQUIRE_APPROVAL"
+  } ],
+  "success" : {
+    "kind" : "TEXT_PRESENT",
+    "text" : "Sub-Account Confirmation",
+    "regex" : false
+  },
+  "knownOutcomes" : [ {
+    "code" : "MEMBER_NOT_FOUND",
+    "outcomeClass" : "BUSINESS",
+    "detect" : {
+      "kind" : "ANY_OF",
+      "regex" : false,
+      "anyOf" : [ {
+        "kind" : "TEXT_PRESENT",
+        "text" : "No member found",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "no such member",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "No results",
+        "regex" : false
+      } ]
+    },
+    "terminal" : true,
+    "message" : "No member matches the supplied ID."
+  }, {
+    "code" : "PERMISSION_DENIED",
+    "outcomeClass" : "DENIED",
+    "detect" : {
+      "kind" : "ANY_OF",
+      "regex" : false,
+      "anyOf" : [ {
+        "kind" : "TEXT_PRESENT",
+        "text" : "do not have permission",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "not authorized",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "access denied",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "restricted",
+        "regex" : false
+      } ]
+    },
+    "terminal" : true,
+    "message" : "The operator role cannot view this member."
+  }, {
+    "code" : "VALIDATION_REJECTED",
+    "outcomeClass" : "BUSINESS",
+    "detect" : {
+      "kind" : "ANY_OF",
+      "regex" : false,
+      "anyOf" : [ {
+        "kind" : "TEXT_PRESENT",
+        "text" : "must be",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "is required",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "invalid amount",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "cannot be negative",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "please correct",
+        "regex" : false
+      } ]
+    },
+    "terminal" : true,
+    "message" : "The application rejected the submitted values."
+  }, {
+    "code" : "SESSION_EXPIRED",
+    "outcomeClass" : "DENIED",
+    "detect" : {
+      "kind" : "ANY_OF",
+      "regex" : false,
+      "anyOf" : [ {
+        "kind" : "TEXT_PRESENT",
+        "text" : "session has expired",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "please sign in again",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "session timeout",
+        "regex" : false
+      } ]
+    },
+    "terminal" : true,
+    "message" : "The session expired mid-flow; a fresh login is required."
+  } ],
+  "recoveries" : [ {
+    "code" : "TRANSIENT_LOAD",
+    "detect" : {
+      "kind" : "ANY_OF",
+      "regex" : false,
+      "anyOf" : [ {
+        "kind" : "TEXT_PRESENT",
+        "text" : "Loading…",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "Please wait",
+        "regex" : false
+      }, {
+        "kind" : "TEXT_PRESENT",
+        "text" : "One moment",
+        "regex" : false
+      } ]
+    },
+    "strategy" : "WAIT_RETRY",
+    "maxAttempts" : 3,
+    "backoffMs" : 1000
+  }, {
+    "code" : "KNOWN_INTERSTITIAL",
+    "detect" : {
+      "kind" : "ELEMENT_VISIBLE",
+      "regex" : false,
+      "target" : {
+        "primary" : {
+          "kind" : "ROLE_NAME",
+          "role" : "button",
+          "name" : "Continue"
+        },
+        "fallbacks" : [ {
+          "kind" : "ROLE_NAME",
+          "role" : "button",
+          "name" : "OK"
+        }, {
+          "kind" : "TEXT",
+          "text" : "Dismiss"
+        } ],
+        "rationale" : "A known interstitial ('Continue'/'OK'/'Dismiss') that some tenants show after login."
+      }
+    },
+    "strategy" : "DISMISS",
+    "maxAttempts" : 2,
+    "backoffMs" : 500,
+    "dismissAction" : {
+      "id" : "recovery-dismiss",
+      "action" : "CLICK",
+      "intent" : "dismiss known interstitial",
+      "target" : {
+        "primary" : {
+          "kind" : "ROLE_NAME",
+          "role" : "button",
+          "name" : "Continue"
+        },
+        "fallbacks" : [ {
+          "kind" : "ROLE_NAME",
+          "role" : "button",
+          "name" : "OK"
+        }, {
+          "kind" : "TEXT",
+          "text" : "Dismiss"
+        } ],
+        "rationale" : "same chain as the detector"
+      },
+      "risk" : "SAFE",
+      "policy" : "ALLOW"
+    }
+  } ],
+  "redaction" : {
+    "secretsNeverLogged" : [ "credentials.password" ],
+    "sensitiveParams" : [ ],
+    "patterns" : [ "\\b\\d{3}-\\d{2}-\\d{4}\\b", "\\b(?:\\d[ -]*?){13,16}\\b", "(?i)bearer\\s+[a-z0-9._\\-]+", "sk-ant-[a-zA-Z0-9_\\-]+" ]
+  }
+}
